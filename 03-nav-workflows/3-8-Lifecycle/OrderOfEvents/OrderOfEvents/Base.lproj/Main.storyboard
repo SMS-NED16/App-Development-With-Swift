@@ -99,18 +99,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3O-FE-oGU">
-                                <rect key="frame" x="160.5" y="764" width="93" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="To First"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Q3O-FE-oGU" firstAttribute="centerX" secondItem="P9B-8b-BK7" secondAttribute="centerX" id="3JW-gZ-SwI"/>
                             <constraint firstItem="C8f-GK-RNR" firstAttribute="centerY" secondItem="P9B-8b-BK7" secondAttribute="centerY" id="674-c6-vc9"/>
                             <constraint firstItem="C8f-GK-RNR" firstAttribute="centerX" secondItem="P9B-8b-BK7" secondAttribute="centerX" id="ACq-Nx-Pr9"/>
-                            <constraint firstItem="DLV-su-xNg" firstAttribute="bottom" secondItem="Q3O-FE-oGU" secondAttribute="bottom" constant="50" id="uTP-ep-Kcr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DLV-su-xNg"/>
                     </view>
