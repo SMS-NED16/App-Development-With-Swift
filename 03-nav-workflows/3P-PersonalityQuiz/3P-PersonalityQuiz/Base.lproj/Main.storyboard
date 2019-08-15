@@ -236,7 +236,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="zw0-4x-ftG"/>
                     <connections>
-                        <outlet property="multiLabel1" destination="7xd-k1-xaM" id="fUw-V2-RCa"/>
+                        <outlet property="multiLabel1" destination="uMl-hz-A9i" id="GfF-Tj-Mo9"/>
                         <outlet property="multiLabel2" destination="kN3-J6-kUY" id="MP7-Ey-2Ge"/>
                         <outlet property="multiLabel3" destination="zVb-q3-nyO" id="uRE-1W-YJL"/>
                         <outlet property="multiLabel4" destination="BSy-DH-AfQ" id="YvO-fW-kzC"/>
