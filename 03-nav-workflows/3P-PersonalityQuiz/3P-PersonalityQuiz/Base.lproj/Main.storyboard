@@ -233,17 +233,23 @@
                             <constraint firstItem="135-UN-7ag" firstAttribute="trailing" secondItem="MuI-Wq-ePR" secondAttribute="trailing" constant="20" id="zKz-V7-wwP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="135-UN-7ag"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="MuI-Wq-ePR"/>
-                                <exclude reference="rZJ-6d-NiU"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="zw0-4x-ftG"/>
                     <connections>
+                        <outlet property="multiLabel1" destination="7xd-k1-xaM" id="fUw-V2-RCa"/>
+                        <outlet property="multiLabel2" destination="kN3-J6-kUY" id="MP7-Ey-2Ge"/>
+                        <outlet property="multiLabel3" destination="zVb-q3-nyO" id="uRE-1W-YJL"/>
+                        <outlet property="multiLabel4" destination="BSy-DH-AfQ" id="YvO-fW-kzC"/>
                         <outlet property="multipleStackView" destination="rZJ-6d-NiU" id="dA6-rJ-v9Y"/>
+                        <outlet property="questionLabel" destination="6Nk-DA-Dgb" id="U6l-IG-LIP"/>
+                        <outlet property="questionProgressView" destination="MCC-tv-CxL" id="znB-gb-SA3"/>
+                        <outlet property="rangedLabel1" destination="d9T-pm-Wpc" id="3Dl-8l-kPA"/>
+                        <outlet property="rangedLabel2" destination="MKj-ZQ-8ic" id="Y8M-qp-FoJ"/>
                         <outlet property="rangedStackView" destination="MuI-Wq-ePR" id="zsb-LJ-XNx"/>
+                        <outlet property="singleButton1" destination="L82-6s-yRg" id="SKB-4S-0DN"/>
+                        <outlet property="singleButton2" destination="80T-yc-bQq" id="86d-I0-C8V"/>
+                        <outlet property="singleButton3" destination="iCS-I9-BqQ" id="OuI-oS-dcc"/>
+                        <outlet property="singleButton4" destination="zzo-Po-aSz" id="0j9-Ze-IOI"/>
                         <outlet property="singleStackView" destination="Tyv-D6-uwR" id="XhB-5L-1If"/>
                         <segue destination="4nf-oJ-r2Z" kind="show" identifier="ResultsSegue" id="1qn-XU-dSG"/>
                     </connections>
