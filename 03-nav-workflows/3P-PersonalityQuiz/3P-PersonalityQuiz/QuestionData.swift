@@ -37,7 +37,7 @@ enum AnimalType: Character {
         case .rabbit:
             return "You love everything that's soft. You are healthy and full of energy."
         case .turtle:
-            return "You are wise beyond your years, and you focus on the detauls. Slow and steady wins the race."
+            return "You are wise beyond your years, and you focus on the details. Slow and steady wins the race."
         }
     }
 }
