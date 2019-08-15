@@ -233,14 +233,16 @@ class QuestionViewController: UIViewController {
             performSegue(withIdentifier: "ResultsSegue", sender: nil)
         }
     }
-    /*
+    
     // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "ResultsSegue" {
+            // Downcast destination from ViewController to ResultsViewController so we can access `responses` property
+            let resultsViewController = segue.destination as! ResultsViewController
+            resultsViewController.responses = answersChosen
+        }
     }
-    */
+ 
 
 }

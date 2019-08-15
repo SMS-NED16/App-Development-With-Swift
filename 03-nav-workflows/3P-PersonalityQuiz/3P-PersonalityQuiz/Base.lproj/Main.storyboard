@@ -316,10 +316,19 @@
                         <viewLayoutGuide key="safeArea" id="9gT-YB-sfu"/>
                     </view>
                     <navigationItem key="navigationItem" title="Results" id="c14-cy-xxA">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="rLf-65-pQ9"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="rLf-65-pQ9">
+                            <connections>
+                                <segue destination="vg3-D8-Vz3" kind="unwind" unwindAction="unwindToQuizIntroductionWithSegue:" id="xkz-Ue-oXt"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="resultAnswerLabel" destination="LbP-qn-yGf" id="QNl-lZ-ksh"/>
+                        <outlet property="resultDefinitionLabel" destination="3gK-za-8vf" id="Dzy-NL-qET"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dIJ-Qd-oS5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="vg3-D8-Vz3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2418.840579710145" y="99.776785714285708"/>
         </scene>
