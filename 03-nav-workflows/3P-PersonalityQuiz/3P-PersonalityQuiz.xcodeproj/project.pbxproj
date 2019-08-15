@@ -14,6 +14,7 @@
 		9401E8CE2304E40D00DFDA1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9401E8CC2304E40D00DFDA1D /* LaunchScreen.storyboard */; };
 		9401E8D62304EDB000DFDA1D /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9401E8D52304EDB000DFDA1D /* QuestionViewController.swift */; };
 		9401E8D82304EDB900DFDA1D /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9401E8D72304EDB900DFDA1D /* ResultsViewController.swift */; };
+		94EF91A32305053300C36F0E /* QuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EF91A22305053300C36F0E /* QuestionData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		9401E8CF2304E40D00DFDA1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9401E8D52304EDB000DFDA1D /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		9401E8D72304EDB900DFDA1D /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		94EF91A22305053300C36F0E /* QuestionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				9401E8C32304E40B00DFDA1D /* AppDelegate.swift */,
 				9401E8C52304E40B00DFDA1D /* IntroductionViewController.swift */,
 				9401E8C72304E40B00DFDA1D /* Main.storyboard */,
+				94EF91A22305053300C36F0E /* QuestionData.swift */,
 				9401E8D52304EDB000DFDA1D /* QuestionViewController.swift */,
 				9401E8D72304EDB900DFDA1D /* ResultsViewController.swift */,
 				9401E8CA2304E40D00DFDA1D /* Assets.xcassets */,
@@ -143,6 +146,7 @@
 			files = (
 				9401E8C62304E40B00DFDA1D /* IntroductionViewController.swift in Sources */,
 				9401E8C42304E40B00DFDA1D /* AppDelegate.swift in Sources */,
+				94EF91A32305053300C36F0E /* QuestionData.swift in Sources */,
 				9401E8D62304EDB000DFDA1D /* QuestionViewController.swift in Sources */,
 				9401E8D82304EDB900DFDA1D /* ResultsViewController.swift in Sources */,
 			);
