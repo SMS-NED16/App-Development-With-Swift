@@ -196,7 +196,15 @@ class QuestionViewController: UIViewController {
     }
     
     func updateMultipleStack(using answers: [Answer]) {
-        multipleStackView.isHidden = false
+        multipleStackView.isHidden = false          // Unhide the view
+        
+        // Reset all options to default states - prevents them from retaining prev question states
+        multiSwitch1.isOn = false
+        multiSwitch2.isOn = false
+        multiSwitch3.isOn = false
+        multiSwitch4.isOn = false
+        
+        // Update labels
         multiLabel1.text = answers[0].text
         multiLabel2.text = answers[1].text
         multiLabel3.text = answers[2].text
@@ -205,6 +213,8 @@ class QuestionViewController: UIViewController {
     
     func updateRangeStack(using answers: [Answer]) {
         rangedStackView.isHidden = false
+        rangeSlider.setValue(0.5, animated: false)
+        
         
         // using first and last properties on the answers collection
         // is safer than direct indexing because we aren't sure what
