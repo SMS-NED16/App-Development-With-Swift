@@ -233,9 +233,18 @@
                             <constraint firstItem="135-UN-7ag" firstAttribute="trailing" secondItem="MuI-Wq-ePR" secondAttribute="trailing" constant="20" id="zKz-V7-wwP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="135-UN-7ag"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="MuI-Wq-ePR"/>
+                                <exclude reference="rZJ-6d-NiU"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="zw0-4x-ftG"/>
                     <connections>
+                        <outlet property="multipleStackView" destination="rZJ-6d-NiU" id="dA6-rJ-v9Y"/>
+                        <outlet property="rangedStackView" destination="MuI-Wq-ePR" id="zsb-LJ-XNx"/>
+                        <outlet property="singleStackView" destination="Tyv-D6-uwR" id="XhB-5L-1If"/>
                         <segue destination="4nf-oJ-r2Z" kind="show" identifier="ResultsSegue" id="1qn-XU-dSG"/>
                     </connections>
                 </viewController>

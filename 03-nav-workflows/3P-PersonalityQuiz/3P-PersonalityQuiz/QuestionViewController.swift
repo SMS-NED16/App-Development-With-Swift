@@ -9,8 +9,13 @@
 import UIKit
 
 class QuestionViewController: UIViewController {
+    // MARK:- IB OUTLETS
+    @IBOutlet weak var rangedStackView: UIStackView!
+    @IBOutlet weak var multipleStackView: UIStackView!
+    @IBOutlet weak var singleStackView: UIStackView!
+    
     // MARK:- QUESTIONS
-    var question: [Question] = [
+    var questions: [Question] = [
         Question(text: "Which food do you like the most?",
                  type: .single,
                  answers: [
@@ -44,8 +49,34 @@ class QuestionViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        // Load the proper stack view for the given question
+        updateUI()
     }
     
+    
+    // MARK:- HELPER FUNCTIONS
+    func updateUI() {
+        // First hide all three stack views
+        singleStackView.isHidden = true
+        multipleStackView.isHidden = true
+        rangedStackView.isHidden = true
+        
+        // Update the title to the question number
+        navigationItem.title = "Question \(questionIndex + 1)"  // +1 because 0 indexing
+        
+        // Get the current question from the array
+        let currentQuestion = questions[questionIndex]
+        
+        // Based on this question's type, show the correct stack view
+        switch currentQuestion.type {
+        case .single:
+            singleStackView.isHidden = false
+        case .multiple:
+            multipleStackView.isHidden = false
+        case .ranged:
+            multipleStackView.isHidden = false
+        }
+    }
 
     /*
     // MARK: - Navigation
