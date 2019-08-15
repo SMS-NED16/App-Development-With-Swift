@@ -16,24 +16,98 @@ class QuestionViewController: UIViewController {
     // Progress Bar
     @IBOutlet weak var questionProgressView: UIProgressView!
     
-    // Ranged Selection Outlets
+    // MARK:- RANGED SELECTION OUTLETS
     @IBOutlet weak var rangedStackView: UIStackView!
     @IBOutlet weak var rangedLabel1: UILabel!
     @IBOutlet weak var rangedLabel2: UILabel!
+    @IBOutlet weak var rangeSlider: UISlider!
     
-    // Multiple Option Selection Outlets
+    
+    // MARK:- RANGED SELECTION ACTIONS
+    @IBAction func rangeAnswerButtonPressed() {
+        // Once gain, get the possible answers for this question
+        let currentAnswers = questions[questionIndex].answers
+        
+        // Scale value of the slider by the max value of indices, then round
+        // to nearest index
+        let index = Int(round(rangeSlider.value * Float(currentAnswers.count - 1)))
+        
+        // The chosen answer is the one at the rounded index
+        answersChosen.append(currentAnswers[index])
+        
+        // Onwards
+        nextQuestion()
+    }
+    
+    
+    
+    // MARK: - MULTIPLE SELECTION OUTLETS
+    // Stack view
     @IBOutlet weak var multipleStackView: UIStackView!
+    
+    // Labels
     @IBOutlet weak var multiLabel1: UILabel!
     @IBOutlet weak var multiLabel2: UILabel!
     @IBOutlet weak var multiLabel3: UILabel!
     @IBOutlet weak var multiLabel4: UILabel!
     
-    // Single Option Selection Outlets
+    // Switches
+    @IBOutlet weak var multiSwitch1: UISwitch!
+    @IBOutlet weak var multiSwitch2: UISwitch!
+    @IBOutlet weak var multiSwitch3: UISwitch!
+    @IBOutlet weak var multiSwitch4: UISwitch!
+    
+    // MARK - MULTIPLE SELECTION ACTIONS
+    @IBAction func multipleAnswerButtonPressed() {
+        let currentAnswers = questions[questionIndex].answers
+        
+        // Because multiple selection, can append up to 4 answers per question
+        if multiSwitch1.isOn {
+            answersChosen.append(currentAnswers[0])
+        }
+        
+        if multiSwitch2.isOn {
+            answersChosen.append(currentAnswers[1])
+        }
+        
+        if multiSwitch3.isOn {
+            answersChosen.append(currentAnswers[2])
+        }
+        
+        if multiSwitch4.isOn {
+            answersChosen.append(currentAnswers[3])
+        }
+        
+        nextQuestion()
+    }
+    
+    // MARK:- SINGLE SELECTION OUTLETS
     @IBOutlet weak var singleStackView: UIStackView!
     @IBOutlet weak var singleButton1: UIButton!
     @IBOutlet weak var singleButton2: UIButton!
     @IBOutlet weak var singleButton3: UIButton!
     @IBOutlet weak var singleButton4: UIButton!
+    
+    // MARK:- SINGLE SELECTION ACTIONS
+    @IBAction func singleAnswerButtonPressed(_ sender: UIButton) {
+        // First get all the answers for this question
+        let currentAnswers = questions[questionIndex].answers
+        
+        // Based on the ID of pressed button, append a different answer to chosenAnswers array
+        switch sender {
+        case singleButton1:
+            answersChosen.append(currentAnswers[0])
+        case singleButton2:
+            answersChosen.append(currentAnswers[1])
+        case singleButton3:
+            answersChosen.append(currentAnswers[2])
+        case singleButton4:
+            answersChosen.append(currentAnswers[3])
+        default:
+            break
+        }
+        nextQuestion()      // update UI or move to results
+    }
     
     // MARK:- QUESTIONS
     var questions: [Question] = [
@@ -64,8 +138,10 @@ class QuestionViewController: UIViewController {
     ]
     
     // MARK:- INSTANCE PROPERTIES
-    var questionIndex = 0           // used to keep track of question to display next
+    var questionIndex = 0               // track current + next question to display
+    var answersChosen: [Answer] = []    // store all user answers
     
+    // MARK:- LIFECYCLE METHODS
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -135,6 +211,17 @@ class QuestionViewController: UIViewController {
         // the number of answers will be
         rangedLabel1.text = answers.first?.text
         rangedLabel2.text = answers.last?.text
+    }
+    
+    func nextQuestion() {
+        questionIndex += 1      // increment question counter variable
+        
+        // if not last question, update UI with next question, otherwise go to results
+        if questionIndex < questions.count {
+            updateUI()
+        } else {
+            performSegue(withIdentifier: "ResultsSegue", sender: nil)
+        }
     }
     /*
     // MARK: - Navigation
