@@ -24,7 +24,7 @@ class QuestionViewController: UIViewController {
     
     
     // MARK:- RANGED SELECTION ACTIONS
-    @IBAction func rangeAnswerButtonPressed() {
+    @IBAction func rangeAnswerButtonPressed(_ sender: UIButton) {
         // Once gain, get the possible answers for this question
         let currentAnswers = questions[questionIndex].answers
         
@@ -58,7 +58,7 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var multiSwitch4: UISwitch!
     
     // MARK - MULTIPLE SELECTION ACTIONS
-    @IBAction func multipleAnswerButtonPressed() {
+    @IBAction func multipleAnswerButtonPressed(_ sender: UIButton) {
         let currentAnswers = questions[questionIndex].answers
         
         // Because multiple selection, can append up to 4 answers per question

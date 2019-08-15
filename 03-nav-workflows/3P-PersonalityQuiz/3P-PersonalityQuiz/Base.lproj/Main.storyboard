@@ -251,12 +251,6 @@
                             <constraint firstItem="135-UN-7ag" firstAttribute="trailing" secondItem="MuI-Wq-ePR" secondAttribute="trailing" constant="20" id="zKz-V7-wwP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="135-UN-7ag"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="Tyv-D6-uwR"/>
-                                <exclude reference="rZJ-6d-NiU"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="zw0-4x-ftG"/>
                     <connections>
