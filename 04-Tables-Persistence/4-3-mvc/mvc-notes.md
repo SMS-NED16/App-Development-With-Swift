@@ -38,3 +38,27 @@
 	- If model updated, can send a callback to the controller to instruct the view that to update and redraw itself.
 - **Model Controllers** are used to control a specific object or collection of objects.
 - **Helper Controllers** consolidate and combine properties and functionality for a collection of objects so that it can be accessed by other objects e.g. `NetworkController` deals solely with networking and server communication.
+
+## Project Organization and Best Practices
+- Write clear, descriptive names for files, funtions, structures, classes, protocols, and objects.
+- Create separate files for each class, structure, protocol, or enumeration.
+- Write code as if complete strangers are going to read it: detailed comments, clear function signatures, descriptive names.
+- Make separate folders for the different components of your app in Xcode
+	- view controllers
+	- views
+	- model
+	- model controllers
+	- other controllers
+	- protocols
+	- extensions
+	- resources
+		- storyboards
+		- extensions
+		- frameworks
+- A simpler organizational structure is 
+	- view controllers
+	- views
+	- models
+	- other controllers
+	- AppDelegate.swift (top level)
+	- Main.storyboard (top level)
