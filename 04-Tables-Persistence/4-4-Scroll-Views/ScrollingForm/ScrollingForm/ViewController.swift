@@ -42,7 +42,16 @@ class ViewController: UIViewController {
     }
     
     @objc func keyboardWillBeHidden(_ notification: NSNotification) {
-        let contentInsets = UIEdgeInsets.zero
+        // Modifying the contentInsets for keyboardWillBeHidden to prevent the keyboard from
+        // overlapping the scroll bar in the adjusted scroll view
+        guard let info = notification.userInfo,
+            let keyboardFrameValue = info[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue
+            else { return }
+        
+        let keyboardFrame = keyboardFrameValue.cgRectValue
+        let keyboardSize = keyboardFrame.size
+        
+        let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: keyboardSize.height, right: 0.0)
         scrollView.contentInset = contentInsets
         scrollView.scrollIndicatorInsets = contentInsets
     }
