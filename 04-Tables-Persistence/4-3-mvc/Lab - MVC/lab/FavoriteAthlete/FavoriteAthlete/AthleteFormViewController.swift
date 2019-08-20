@@ -40,6 +40,8 @@ class AthleteFormViewController: UIViewController {
             let athleteTeam = teamTextField.text else { return }
         
         athlete = Athlete(name: athleteName, age: Int(athleteAge)!, league: athleteLeague, team: athleteTeam)
+        
+        performSegue(withIdentifier: "saveAthlete", sender: self)
     }
     /*
     // MARK: - Navigation
