@@ -41,7 +41,7 @@ class AthleteFormViewController: UIViewController {
         
         athlete = Athlete(name: athleteName, age: Int(athleteAge)!, league: athleteLeague, team: athleteTeam)
         
-        performSegue(withIdentifier: "saveAthlete", sender: self)
+        performSegue(withIdentifier: "unwindToTable", sender: self)
     }
     /*
     // MARK: - Navigation

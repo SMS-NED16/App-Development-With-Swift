@@ -152,7 +152,7 @@
                         <outlet property="leagueTextField" destination="Aap-hH-FNd" id="ckS-EP-nrO"/>
                         <outlet property="nameTextField" destination="U3J-R0-1jS" id="dl6-J8-Pju"/>
                         <outlet property="teamTextField" destination="rKE-v9-NBr" id="nO8-EE-OgG"/>
-                        <segue destination="wFc-3q-vwq" kind="unwind" identifier="UnwindToAthleteTable" unwindAction="prepareForUnwindWithSegue:" id="HPS-Df-mzT"/>
+                        <segue destination="wFc-3q-vwq" kind="unwind" identifier="unwindToTable" unwindAction="updateAthletesTableWithSegue:" id="pgX-Ni-VOH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MrL-ji-oiy" sceneMemberID="firstResponder"/>
