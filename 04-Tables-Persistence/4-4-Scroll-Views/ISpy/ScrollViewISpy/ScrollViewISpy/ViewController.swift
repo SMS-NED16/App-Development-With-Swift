@@ -16,7 +16,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         // Do any additional setup after loading the view.
         
         // Setting this viewController as UIScrollViewDelegate
-        scrollView.delegate = view as? UIScrollViewDelegate
+        scrollView.delegate = self // not view as? UIViewScrollViewDelegate
         
         // Every time the view loads, update the image view's scale
         updateZoomFor(size: view.bounds.size)
